@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import { OpenAI } from "openai";
-import Configuration from "openai";
+import { Configuration, OpenAI } from "openai";
 import {
 	initAuth,
 	createPayload,
@@ -14,7 +14,7 @@ import {
 
 const COPY_OUTPUT = "Copy Output";
 
-const initOpenAI = (credentials: Config): OpenAIApi => {
+const initOpenAI = (credentials: Config): OpenAI => {
 	const openaiConfig = new Configuration({
 		...credentials
 	});
