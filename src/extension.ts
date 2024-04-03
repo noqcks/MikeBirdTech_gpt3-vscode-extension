@@ -85,7 +85,7 @@ Doc comments:
 
 		const response = await openai.completions.create(payload);
 
-		const output = response.data.choices[0].text?.trim();
+		const output = response.choices[0].text?.trim();
 
 		if(response.data.usage?.total_tokens && response.data.usage?.total_tokens >= payload.max_tokens) {
 			vscode.window.showErrorMessage(`The completion was ${response.data.usage?.total_tokens} tokens and exceeds your max_token value of ${payload.max_tokens}. Please increase your settings to allow for longer completions.`);
