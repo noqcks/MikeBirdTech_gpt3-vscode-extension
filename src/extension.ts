@@ -82,7 +82,7 @@ Doc comments:
 			deactivate();
 		};
 
-		const response = await openai.createCompletion({ ...payload });
+		const response = await openai.createCompletion(payload);
 
 		const output = response.data.choices[0].text?.trim();
 
