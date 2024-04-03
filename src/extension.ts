@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import { OpenAI } from "openai";
 import { OpenAI } from "openai";
-import Configuration from "openai";
+import { Configuration, OpenAIApi } from "openai";
 import {
 	initAuth,
 	createPayload,
